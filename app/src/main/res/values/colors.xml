@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="copia_yellow">#FFC107</color>
+    <color name="copia_yellow_dark">#AC851E</color>
+    <color name="copia_green">#388E3C</color>
+    <color name="copia_blue">#ff0099cc</color>
+    <color name="faded_copia_blue">#87D7EB</color>
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="title_text">#353535</color>
+    <color name="sub_title_text">#8e8e8e</color>
+    <color name="content_text">#353535</color>
+    <color name="grey">#8e8e8e</color>
+    <color name="dark_grey">#3e3e3e</color>
+    <color name="light_grey">#cccccc</color>
+    <color name="very_light_grey">#e7e7e7</color>
+    <color name="very_lighter_grey">#A0E7E7E7</color>
+    <color name="transparent_white">#a8ffffff</color>
+    <color name="transluscent_white">#B6FFFFFF</color>
+    <color name="transluscent_blue">#A90099CC</color>
+    <color name="copia_red">#ca4738</color>
+    <color name="copia_faded_yellow">#ffeaab</color>
+    <color name="copia_green_light">#ABF1AF</color>
+    <color name="copia_blue_light">#A6E3FC</color>
+    <color name="copia_red_light">#FCA39B</color>
+    <color name="copia_red_lighter">#8EFCA39B</color>
+
+    <color name="light_orange">#FFC288</color>
+    <color name="dark_orange">#FF8F5D</color>
+    <color name="default_track_color">#f3e5dd</color>
+    <color name="red_start">#f54ea2</color>
+    <color name="red_end">#ff7676</color>
+    <color name="purple_start">#7117ea</color>
+    <color name="purple_end">#ea6060</color>
+    <color name="green_start">#42e695</color>
+    <color name="green_end">#3bb2b8</color>
+    <color name="blue_start">#879af2</color>
+    <color name="blue_end">#fda000</color>
+    <color name="purple_light">#e488ff</color>
+    <color name="error_red">#D80027</color>
+
+    <color name="defaultTextColor">#FFFFFF</color>
+    <color name="errorColor">#D50000</color>
+    <color name="infoColor">#3F51B5</color>
+    <color name="successColor">#388E3C</color>
+    <color name="warningColor">#FFA900</color>
+    <color name="normalColor">#353A3E</color>
+    <color name="someNavyColor">#869AF1</color>
+    <color name="someBlueColor">#57BBDD</color>
+    <color name="someOrangeColor">#FFC289</color>
+    <color name="flat_pressed">#66999999</color>
+
+    <color name="transparent_black">#7F000000</color>
+    <color name="main_blue_color">#2469df</color>
+    <!-- A dark Holo shade of red -->
+    <color name="holo_red_dark">#ffcc0000</color>
+    <color name="red_btn_bg_color">#DD6B55</color>
+
+    <color name="bsp_circle_background">#f2f2f2</color>
+    <color name="bsp_line_background">#1f000000</color> <!--12% black. Originally #cccccc-->
+    <color name="bsp_ampm_text_color">#8c8c8c</color>
+    <color name="bsp_done_text_color_normal">#000000</color>
+    <color name="bsp_done_text_color_disabled">#cccccc</color>
+    <color name="bsp_numbers_text_color">#8c8c8c</color>
+
+    <color name="bsp_transparent_black">#7f000000</color>
+    <color name="bsp_blue">#33b5e5</color>
+    <color name="bsp_blue_focused">#c1e8f7</color>
+    <color name="bsp_neutral_pressed">#33999999</color>
+    <color name="bsp_darker_blue">#0099cc</color>
+    <color name="bsp_date_picker_text_normal">#ff999999</color>
+    <color name="bsp_date_picker_text_disabled">#ccc</color>
+
+    <color name="bsp_calendar_header">#999999</color>
+    <color name="bsp_date_picker_view_animator">@android:color/white</color>
+    <color name="bsp_calendar_selected_date_text">#ffd1d2d4</color>
+
+    <!-- Colors for red theme -->
+    <color name="bsp_red">#ff3333</color>
+    <color name="bsp_red_focused">#853333</color>
+    <color name="bsp_light_gray">#303030</color> <!--800 < Grey < 900. Originally #404040-->
+    <color name="bsp_dark_gray">#212121</color> <!--Grey 900. Originally #363636-->
+    <color name="bsp_line_dark">#1fffffff</color> <!--12% white. Originally #808080-->
+    <color name="bsp_done_text_color_dark_normal">#ffffff</color>
+    <color name="bsp_done_text_color_dark_disabled">#888888</color>
+    <color name="bsp_done_disabled_dark">#bfbfbf</color>
+
+    <!--My stuff-->
+    <color name="bsp_unselected_color">#80ffffff</color><!--50% white-->
+    <color name="bsp_text_color_primary_dark">#ffffffff</color> <!--100% white-->
+    <color name="bsp_text_color_primary_light">#de000000</color> <!--87% black-->
+    <color name="bsp_text_color_secondary_dark">#b3ffffff</color> <!--70% white-->
+    <color name="bsp_text_color_secondary_light">#8a000000</color> <!--54% black-->
+    <color name="bsp_text_color_disabled_dark">#80ffffff</color> <!--50% white-->
+    <color name="bsp_text_color_disabled_light">#61000000</color> <!--38% black-->
+
+    <!-- Derived from Raised Button section of the guidelines. Make sure to set FAB elevation to 0dp! -->
+    <color name="bsp_fab_disabled_dark">#1fffffff</color> <!--12% white-->
+    <color name="bsp_fab_disabled_light">#1f000000</color> <!--12% black-->
+
+    <color name="bsp_icon_color_active_dark">#ffffffff</color> <!--100% white-->
+    <color name="bsp_icon_color_active_light">#8a000000</color> <!--54% black-->
+    <!-- TODO: This value is from the Icons page. The Colors page lists 50% white for "Icons and other elements". -->
+    <color name="bsp_icon_color_inactive_dark">#4dffffff</color> <!--30% white-->
+    <!-- TODO: This value is from the Icons page. The Colors page lists 38% black for "Icons and other elements". -->
+    <color name="bsp_icon_color_inactive_light">#42000000</color> <!--26% black-->
+
+    <color name="bsp_selectable_item_background_dark">#1fffffff</color>
+</resources>
