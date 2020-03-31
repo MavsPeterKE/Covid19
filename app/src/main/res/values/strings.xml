@@ -1,6 +1,9 @@
 <resources>
-    <string name="app_name">CoronaUpdate</string>
+    <string name="app_name">C-19 Data</string>
     <string name="covid_19_title">COVID 19 UPDATES</string>
-    <string name="search_by_country">Search By Country</string>
-    <string name="reported_cases">Reported Cases</string>
+    <string name="search_by_country">Search By Country e.g Kenya</string>
+    <string name="reported_cases">Reported Cases...</string>
+    <string name="recovered_cases">Recovered...</string>
+    <string name="death_cases">Deaths...</string>
+    <string name="safety_hint">Safety Tips \n 1. Stay at home \n 2.Wash and Sanitize Your hands \n 3. Do not touch your face \n 4. Avoid gatherings \n 5. Follow your government\'s advisory</string>
 </resources>
