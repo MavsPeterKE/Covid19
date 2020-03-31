@@ -6,4 +6,4 @@ It enables User to search by country as a query param
 Kotlin + Retrofit
 
 # How App Looks like
-![App](/home/peter-pc/Documents/Copia Apps/e-catalogue/CoronaUpdate/screenshots/covid.jpeg  "Home")
+![alt text](https://github.com/PeterOnyango/Covid19/blob/master/screenshots/covid.jpeg "Logo Title Text 1")
