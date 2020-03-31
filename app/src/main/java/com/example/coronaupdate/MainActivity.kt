@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
         val apiService = client.getClient()!!.create(ApiInterface::class.java)
 
         // Create Call
-        val call: retrofit2.Call<CoronaResponse> = apiService.getCoronaUpdates(country)
+        val call: retrofit2.Call<CoronaResponse> = apiService.getCoronaUpdates(country.trim())
 
         // Observe Call
         call.enqueue(object : retrofit2.Callback<CoronaResponse> {
