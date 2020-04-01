@@ -1,5 +1,6 @@
 package com.example.coronaupdate
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import android.widget.ProgressBar
@@ -50,8 +51,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun startSearchAction(country: String) {
         progress.visibility = View.VISIBLE;
+
         //get retrofit client instance
-        var client: ApiClient = ApiClient()
+        val client: ApiClient = ApiClient()
 
         //Create Service
         val apiService = client.getClient()!!.create(ApiInterface::class.java)
@@ -63,8 +65,8 @@ class MainActivity : AppCompatActivity() {
         call.enqueue(object : retrofit2.Callback<CoronaResponse> {
             override fun onFailure(call: retrofit2.Call<CoronaResponse>?, t: Throwable?) {
                 progress.visibility = View.INVISIBLE;
-                val errrorMsg = t!!.localizedMessage;
-                showError(errrorMsg)
+                val errorMsg = t!!.localizedMessage;
+                showError(errorMsg)
             }
 
             override fun onResponse(
@@ -74,16 +76,7 @@ class MainActivity : AppCompatActivity() {
                 progress.visibility = View.INVISIBLE;
                 if (response!!.isSuccessful) {
                     selectedCountry = country;
-                    val result = (response.body()!!);
-                    if (result!!.message!!.contains("Country not found")) {
-                        showError("Country not found. Please Ensure the first letter is in Capital")
-                    } else {
-                        if (result!!.data!!.covidStatsList!!.size > 1) {
-                            showError("Country Has Updates Per Province. We are currently able to show for whole country")
-                        } else {
-                            setCovidDataOnViews(result)
-                        }
-                    }
+                    setResponseResult((response.body()!!))
 
                 } else {
                     showError("Error Finding Updates. Please Try Again Later")
@@ -92,6 +85,18 @@ class MainActivity : AppCompatActivity() {
 
         })
 
+    }
+
+    private fun setResponseResult(coronaDataResponse: CoronaResponse) {
+        if (coronaDataResponse!!.message!!.contains("Country not found")) {
+            showError("Country not found. Please Ensure the first letter is in Capital")
+        } else {
+            if (coronaDataResponse!!.data!!.covidStatsList!!.size > 1) {
+                showError("Country Has Updates Per Province. We are currently able to show for whole country")
+            } else {
+                setCovidDataOnViews(coronaDataResponse)
+            }
+        }
     }
 
     private fun showError(message: String) {
@@ -104,6 +109,7 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this@MainActivity, error, Toast.LENGTH_SHORT).show();
     }
 
+    @SuppressLint("SetTextI18n")
     private fun setCovidDataOnViews(result: CoronaResponse) {
         tvReported.visibility = View.VISIBLE
         tvTitle.text = "Confirmed Cases in $selectedCountry"
