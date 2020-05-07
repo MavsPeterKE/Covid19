@@ -7,7 +7,7 @@ class CoronaResponse {
     var error: Boolean? = null;
 
     @SerializedName("statusCode")
-    var statusCode: Integer? = null;
+    var statusCode: Int? = null;
 
     @SerializedName("message")
     var message: String? = null;

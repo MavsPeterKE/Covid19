@@ -1,4 +1,4 @@
-package com.example.coronaupdate
+package com.example.coronaupdate.view.activity
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.widget.SearchView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.coronaupdate.R
 import com.example.coronaupdate.retrofit.ApiClient
 import com.example.coronaupdate.retrofit.ApiInterface
 import com.example.coronaupdate.retrofit.structures.CoronaResponse
@@ -87,21 +88,20 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun setResponseResult(coronaDataResponse: CoronaResponse) {
-        if (coronaDataResponse!!.message!!.contains("Country not found")) {
+    private fun setResponseResult(coronaDataResponse: CoronaResponse) =
+        if (coronaDataResponse.message!!.contains("Country not found")) {
             showError("Country not found. Please Ensure the first letter is in Capital")
         } else {
-            if (coronaDataResponse!!.data!!.covidStatsList!!.size > 1) {
+            if (coronaDataResponse.data!!.covidStatsList!!.size > 1) {
                 showError("Country Has Updates Per Province. We are currently able to show for whole country")
             } else {
                 setCovidDataOnViews(coronaDataResponse)
             }
         }
-    }
 
-    private fun showError(message: String) {
+    private fun showError(message: String?) {
         val error: String;
-        if (message.contains("Unable to resolve host")) {
+        if (message!!.contains("Unable to resolve host")) {
             error = "Please Ensure Your Data is On"
         } else {
             error = message;
@@ -115,7 +115,7 @@ class MainActivity : AppCompatActivity() {
         tvTitle.text = "Confirmed Cases in $selectedCountry"
         tvReported.text = "${result.data!!.covidStatsList!![0].confirmed}"
         tvRecovered.text =
-            "Recovered : ${result.data!!.covidStatsList!![0].recovered}"
-        tvDeaths.text = "Deaths : ${result.data!!.covidStatsList!![0].deaths}"
+            "Recovered : ${result.data.covidStatsList!![0].recovered}"
+        tvDeaths.text = "Deaths : ${result.data.covidStatsList!![0].deaths}"
     }
 }
