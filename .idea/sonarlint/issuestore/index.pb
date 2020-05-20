@@ -17,5 +17,5 @@ x
 Happ/src/main/java/com/example/coronaupdate/view/activity/MainActivity.kt,a/4/a450dbc0f5cae0defb6c5f1f367f00218a736af1
 R
 "app/src/main/res/values/colors.xml,9/6/969faa2a5d9f5e8390e958d2c07f2cfd54676e6b
-{
-Kapp/src/main/java/com/example/coronaupdate/repositories/CoronaRepository.kt,0/0/00b1fc55c2415d5eb25a517d8fe2eeb92cb94bd9
+€
+Papp/src/main/java/com/example/coronaupdate/data/repositories/CoronaRepository.kt,5/8/585a66850ea5e385ce81f1ec88c85d15cd014d4d

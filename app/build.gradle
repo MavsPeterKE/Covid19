@@ -7,6 +7,10 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
+    dataBinding {
+        enabled = true
+    }
+
     defaultConfig {
         applicationId "com.example.coronaupdate"
         minSdkVersion 16

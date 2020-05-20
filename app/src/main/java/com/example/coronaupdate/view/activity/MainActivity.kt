@@ -8,10 +8,12 @@ import android.widget.SearchView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import com.example.coronaupdate.R
 import com.example.coronaupdate.retrofit.ApiClient
 import com.example.coronaupdate.retrofit.ApiInterface
 import com.example.coronaupdate.retrofit.structures.CoronaResponse
+import com.example.coronaupdate.viewmodels.MainActivityViewModel
 
 class MainActivity : AppCompatActivity() {
     private lateinit var tvReported: TextView;
@@ -21,11 +23,14 @@ class MainActivity : AppCompatActivity() {
     private lateinit var searchView: SearchView;
     private lateinit var progress: ProgressBar;
     private lateinit var selectedCountry: String;
+    private lateinit var mainActivityViewModel: MainActivityViewModel;
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        //mainActivityViewModel = MainActivityViewModel by ViewModels();
+
         initViews()
     }
 
